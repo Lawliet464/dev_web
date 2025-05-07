@@ -1,0 +1,86 @@
+/* === STYLE GLOBAL POUR LA CAN 2025 === */
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to bottom, #006400, #ffcc00); /* Dégradé vert/orange */
+  color: #333;
+  margin: 0;
+  padding: 0;
+  animation: fadeIn 2s ease-out; /* Animation de fade-in pour la page */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Liens de navigation */
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00; /* Jaune doré au survol */
+}
+
+/* === LOGO === */
+.logo-can {
+  height: 70px;
+  width: auto;
+}
+
+/* === IMAGE PRINCIPALE CAN === */
+.image-can {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  border-radius: 8px;
+}
+
+/* === TITRES === */
+h1, h2, h3 {
+  color: #006400; /* Vert foncé */
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards; /* Animation des titres */
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* === BOUTONS === */
+a.btn-custom {
+  background-color: #006400;
+  color: white;
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+a.btn-custom:hover {
+  background-color: #004d00;
+}
+
+/* === FOOTER === */
+footer {
+  font-size: 14px;
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+}
