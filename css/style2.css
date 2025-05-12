@@ -1,0 +1,93 @@
+/* === CLASSEMENT CAN TABLEAU === */
+.container {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #ffb900;
+    font-size: 36px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: slideIn 1s ease-out;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 2px solid #444;
+  }
+  
+  th {
+    background-color: #ffb900;
+    color: #333;
+  }
+  
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  tr:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .team-img {
+    width: 30px;
+    height: 20px;
+    object-fit: cover;
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .button {
+    background-color: #ffb900;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  @keyframes slideIn {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffb900;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+  }
+  
