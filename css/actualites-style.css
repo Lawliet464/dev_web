@@ -5,6 +5,14 @@
   padding: 1rem 0;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  animation:  fadeInContainer 05s ease-out /*,  slideInMatch 05s ease-out; */
+}
+
+/* Définition des animations */
+@keyframes fadeInContainer {
+    from { opacity: 0; transform: scale(0.5); }
+    to { opacity: 1; transform: scale(1); }
 }
 
 
@@ -25,6 +33,9 @@
   height: fit-content;
   margin: 0 0.5rem;
 }
+
+
+
 /* #scrollContainer {
   border: 2px dashed red;
 }
