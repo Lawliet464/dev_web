@@ -1,0 +1,30 @@
+.custom-card{
+    background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            border-radius: .25rem;
+            text-align: center;
+            min-width: 120px; /* Largeur minimale */
+            margin-bottom: .5rem;
+            text-align: center;
+            margin: 1rem;
+            /* Permet une largeur flexible */
+            flex: 1 0 auto;
+            
+            /* Pour les très petits écrans */
+            /* @media (max-width: 400px) {
+                flex-basis: 100%;
+            } */
+}
+.custom-card img{
+    width: 100%;
+    object-fit: cover;
+}
+.custom-cards{
+    display: flex;
+            flex-wrap: wrap;
+            gap: 15px; /* Espace entre les éléments */
+            justify-content: center; /* Centrage horizontal */
+
+         
+}
