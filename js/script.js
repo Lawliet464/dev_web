@@ -94,3 +94,24 @@ const interval = setInterval(() => {
     countdownElement.innerHTML =
     `${days}j ${hours}h ${minutes}m ${seconds}s`;
 }, 1000);
+
+//permettre le clignotement du temps restant sur mla page d'accueil
+const element = document.getElementById('timer');
+        let visible = true;
+
+        function toggleVisibility() {
+            visible = !visible;
+            element.style.opacity = visible ? '1' : '0';
+            
+            // Optionnel: changer d'autres propriétés
+            if (visible) {
+                //element.textContent = "Me revoilà !";
+                element.style.backgroundColor = "#4CAF50";
+            } else {
+                //element.textContent = "Je disparais...";
+                //element.style.backgroundColor = "#f44336";
+            }
+        }
+
+        // Démarrer l'animation
+        setInterval(toggleVisibility, 1000); // 1000 ms = 1 seconde
