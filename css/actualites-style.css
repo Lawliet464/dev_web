@@ -17,10 +17,11 @@
 
 
 .custom-card {
-  flex: 0 0 auto;
+  /*flex: 0 0 auto;*/
   min-width: 320px;
   max-width: 350px;
   scroll-snap-align: start;
+  flex: 1 1 300px; /* min 300px, prend plus si dispo */
 }
 
 .scroll-btn {
