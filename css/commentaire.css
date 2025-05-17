@@ -1,83 +1,85 @@
 /* commentaires */
 
 .all_commentaires {
-	display: flex;
-	align-items: center;
-	margin-left: 1in;
-	flex-direction: row;
-	flex-flow: wrap;
-	padding: 20px;
+	display: flex; /* Mise en page flexible (flexbox) */
+	align-items: center; /* Centrage vertical des enfants */
+	margin-left: 1in; /* Marge à gauche (en pouces, peut être remplacé par px/rem) */
+	flex-direction: row; /* Direction par défaut : en ligne */
+	flex-flow: wrap; /* Permet le retour à la ligne automatique */
+	padding: 20px; /* Espace interne autour du conteneur */
 }
+
 
 .commentaire {
-	font-style: italic;
-	text-align: left;
-	width: 28.875rem;
-    /*width: fit-content;*/
-	padding: 1rem;
-	background-color: #fff;
-	border-radius: 11px;
-	box-shadow: 0 3px 10px var(--primary-shadow);
-	padding: 20px;
-	margin: 10px;
-	border:px solid red;
-	font-size: 18px;
-	height:260px;
-    /*height: 350px;         /* Hauteur fixe à ajuster selon ton besoin */
-    overflow-y: auto;      /* Ajoute une barre de scroll verticale si besoin */
-    scrollbar-width: none;      /* Pour Firefox */
-    -ms-overflow-style: none;   /* Pour Internet Explorer et Edge */
-    &::-webkit-scrollbar {
-        display: none; /* Pour Chrome, Safari et Opera */
-    }
+	font-style: italic; /* Texte en italique */
+	text-align: left; /* Alignement à gauche */
+	width: 28.875rem; /* Largeur fixe adaptée aux contenus */
+	padding: 1rem; /* Espacement interne */
+	background-color: #fff; /* Fond blanc */
+	border-radius: 11px; /* Bords arrondis */
+	box-shadow: 0 3px 10px var(--primary-shadow); /* Ombre portée */
+	margin: 10px; /* Espacement externe entre les commentaires */
+	border: 1px solid red; /*  bordure de l'element */
+	font-size: 18px; /* Taille du texte */
+	height: 260px; /* Hauteur fixe */
+	overflow-y: auto; /* Barre de défilement verticale si dépassement */
+	scrollbar-width: none; /* Cache la scrollbar sur Firefox */
+	-ms-overflow-style: none; /* Cache la scrollbar sur IE/Edge */
 }
 
+/* Cache la scrollbar pour les navigateurs Webkit (Chrome, Safari, Opera) */
+.commentaire::-webkit-scrollbar {
+	display: none;
+}
+
+
 .commentaire span {
-	color: #7600bc;
-	font-size: 20px;
-	font-family: 'Times New Roman', Times, serif;
+	color: #7600bc; /* Couleur violette pour les guillemets */
+    font-size: 20px; /* Taille de police pour les guillemets */
+    font-family: 'Times New Roman', Times, serif; /* Police classique */
+
 }
 
 /* Form Pop-up */
 
 .popup {
-	width:400px;
-	background-color: #e8bcf0;
-	border-radius: 3mm;
-	top: 50%;
-	left:50%;
-	transform: translate(-50%,-50%);
-	text-align: center;
-	position: fixed;
-	/* padding: 30px; */
-	visibility: hidden;
+	width:400px; /* Largeur de la pop-up */
+    background-color: #e8bcf0; /* Fond violet clair */
+    border-radius: 3mm; /* Bords arrondis */
+    top: 50%; /* Position verticale centrée */
+    left:50%; /* Position horizontale centrée */
+    transform: translate(-50%,-50%); /* Centre la pop-up */
+    text-align: center; /* Centre le texte */
+    position: fixed; /* Position fixe sur l'écran */
+    /* padding: 30px; */ /* Espace interne */
+    visibility: hidden; /* Cachée par défaut */
 }
 
 .popup img {
-  	padding-top: 20px;
+  	padding-top: 20px;  /* Espace au-dessus de l'image */
 }
 
 .popup button {
-	background-color: #fff;
-	border: 1px solid #7600bc;
-	color: #7600bc;
-	display: block;
-	border-radius: 6px;
-	text-align: center;
-	margin: 50px;
-	padding: 10px;
-	width: 2in;
-	font-size: 20px;
-	margin-left: 25%;
+	background-color: #fff; /* Fond blanc */
+    border: 1px solid #7600bc; /* Bordure violette */
+    color: #7600bc; /* Texte violet */
+    display: block; /* Affichage en bloc */
+    border-radius: 6px; /* Bords arrondis */
+    text-align: center; /* Centre le texte */
+    margin: 50px; /* Marge autour du bouton */
+    padding: 10px; /* Espace interne */
+    width: 2in; /* Largeur fixe */
+    font-size: 20px; /* Taille du texte */
+    margin-left: 25%; /* Décalage à gauche */
 }
 
 .popup button:hover {
-	background-color: #fff;
-	border: 2px solid #7600bc;
-	color: #7600bc;
-	display: block;
-	font-weight: bolder;
-	text-align: center;
-	cursor: pointer;
-	margin-left: 25%;
+	background-color: #fff; /* Fond blanc au survol */
+    border: 2px solid #7600bc; /* Bordure violette plus épaisse */
+    color: #7600bc; /* Texte violet */
+    display: block; /* Affichage en bloc */
+    font-weight: bolder; /* Texte en gras */
+    text-align: center; /* Centre le texte */
+    cursor: pointer; /* Curseur pointeur */
+    margin-left: 25%; /* Décalage à gauche */
 }

@@ -1,23 +1,28 @@
 <!DOCTYPE html>
+<!-- Déclaration du type de document HTML5 -->
 <html lang="fr">
 <head>
+  <!-- Définition du jeu de caractères et adaptation pour les mobiles -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Accueil - CAN 2025</title>
 
-  <!-- Bootstrap CSS via CDN -->
+  <!-- Intégration de Bootstrap via CDN pour le style -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   
-  <!-- Feuille de style personnalisée -->
+  <!-- Lien vers une feuille de style personnalisée -->
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-  <!-- Header avec logo et menu de navigation -->
+  <!-- En-tête avec logo et menu de navigation -->
   <header class="bg-dark text-white p-3">
     <div class="container d-flex justify-content-between align-items-center">
-      <!-- Logo avec classe personnalisée -->
+      <!-- Affichage du logo -->
       <img src="images/logo.png" alt="Logo CAN" class="logo-can">
+      
+      <!-- Menu de navigation principal -->
       <nav>
         <a href="index.html" class="text-white mx-2" id="index">Accueil</a>
         <a href="actualites.html" class="text-white mx-2" id="actualites">Actualités</a>
@@ -30,56 +35,63 @@
     </div>
   </header>
 
-  <main>
+  <!-- Contenu principal de la page -->
+  <main style="width: 60%;
+  margin: auto;">
+    <!-- Titre principal de la section -->
     <h1 style="color: bisque; text-align: center;">Histoire de la CAN : La légende d'une étoile africaine</h1>
+
+    <!-- Paragraphe d’introduction -->
     <p>
       Il était une fois un vieux continent vibrant d’énergie, de rythmes, de talents bruts et d’espoir. Au cœur de ses plaines, naquit une étoile : la Coupe d’Afrique des Nations. Voici son histoire, en quatre grandes saisons.
     </p>
-    <p>La Coupe d’Afrique des Nations (CAN) est la plus prestigieuse compétition de football en Afrique. 
+    <p>
+      La Coupe d’Afrique des Nations (CAN) est la plus prestigieuse compétition de football en Afrique. 
       Organisée par la Confédération africaine de football (CAF), elle rassemble les meilleures sélections nationales du continent. 
     </p>
-    <p>Depuis sa création en 1957, la CAN a évolué pour devenir un événement incontournable, célébrant le football africain et l’unité du continent.</p>
-    <p>Voici une petite histoire qui retrace les grandes saisons de la Coupe d’Afrique des Nations (CAN) à travers les âges, en les présentant comme des chapitres d’une légende africaine :
+    <p>
+      Depuis sa création en 1957, la CAN a évolué pour devenir un événement incontournable, célébrant le football africain et l’unité du continent.
     </p>
-    
+    <p>
+      Voici une petite histoire qui retrace les grandes saisons de la Coupe d’Afrique des Nations (CAN) à travers les âges, en les présentant comme des chapitres d’une légende africaine :
+    </p>
+    <!-- Accordéon Bootstrap pour présenter les périodes de la CAN -->
     <div class="accordion" id="accordionCAN"> 
 
-        <!-- Titre de la section -->
+        <!-- Première période : Les débuts -->
         <h2>Les débuts (1957 – 1962) : La naissance des géants</h2> 
-
-        <!-- Début d'un élément de l'accordéon -->
         <div class="accordion-item"> 
-            <!-- Texte de présentation affiché par défaut -->
-            La première CAN a lieu en 1957 au Soudan, avec seulement 3 équipes : Égypte, Soudan et Éthiopie. L’Égypte remporte le tournoi. 
+            <!-- Présentation succincte affichée par défaut -->
+             La première CAN a lieu en 1957 au Soudan, avec seulement 3 équipes : Égypte, Soudan et Éthiopie. L’Égypte remporte le tournoi. 
 
-            <!-- En-tête de l'accordéon contenant un bouton interactif -->
+            <!-- En-tête de l'accordéon avec bouton pour afficher/masquer le contenu -->
             <h2 class="accordion-header" id="headingOne"> 
-
-                <!-- Bouton pour afficher ou masquer le contenu détaillé -->
                 <button class="accordion-button collapsed" type="button" 
                         data-bs-toggle="collapse" 
                         data-bs-target="#collapseOne"
                         aria-expanded="false" 
-                        aria-controls="collapseOne"> <!-- Permet d'associer le bouton au contenu -->
+                        aria-controls="collapseOne">
                     Voir plus sur les débuts de la CAN
-                    <!--data-bs-toggle="collapse"   Active l'effet d'affichage/repli --
-                        data-bs-target="#collapseOne"  Cible l'élément à afficher --
-                        aria-expanded="false"  Indique que le contenu est replié par défaut --
-                        aria-controls="collapseOne">  Permet d'associer le bouton au contenu 
-                    -->
                 </button>
+                <!-- <button class="accordion-button collapsed" 
+                  type="button"  
+                  data-bs-toggle="collapse"   Active l'effet d'ouverture/fermeture (collapse) via Bootstrap 
+                  data-bs-target="#collapseOne"  Spécifie l'élément cible (avec l'ID collapseOne) qui sera affecté par le collapse 
+                  aria-expanded="false"   Indique si l'élément est actuellement ouvert (true) ou fermé (false) 
+                  aria-controls="collapseOne"> Relie ce bouton à l'élément qu'il contrôle (avec l'ID collapseOne) 
+                  Voir plus sur les débuts de la CAN
+                </button>-->
+                
             </h2>
 
-        <!-- Contenu supplémentaire caché au départ -->
-        <div id="collapseOne" class="accordion-collapse collapse" 
-             aria-labelledby="headingOne" 
-             data-bs-parent="#accordionCAN"> <!-- Permet de ne garder qu’un seul élément ouvert à la fois -->
-            <!--arial-labellebby="headingOne" !-- Relie ce contenu au bouton ---->
-            <!-- Corps du contenu affiché lorsqu'on clique sur le bouton -->
-            <div class="accordion-body"> 
-
-                <!-- Texte explicatif sur la naissance de la CAN -->
-                La CAN est née dans un contexte de décolonisation et d’unité africaine.  
+            <!-- Contenu détaillé masqué au départ -->
+            <div id="collapseOne" class="accordion-collapse collapse" 
+                 aria-labelledby="headingOne" 
+                 data-bs-parent="#accordionCAN">
+                 <!--arial-labellebby="headingOne" !-- Relie ce contenu au bouton ---->
+                <div class="accordion-body"> 
+                    <!-- Texte avec liste des événements clés -->
+                    La CAN est née dans un contexte de décolonisation et d’unité africaine.  
                 Le tournoi a été créé pour promouvoir le football africain et renforcer les liens entre les pays du continent. 
 
                 <!-- Liste des faits historiques liés aux débuts de la CAN -->
@@ -89,22 +101,29 @@
                     <li>L’Égypte remporte le premier titre.</li>
                     <li>Le tournoi est organisé tous les deux ans.</li>
                     <li>C’était une époque héroïque, aux moyens modestes, mais à la passion immense.</li>
-                </ul>
+                  </ul>
+                </div>
+            </div>
+        </div>
 
-            </div> <!-- Fin du contenu détaillé -->
-        </div> <!-- Fin du contenu réductible -->
-      </div> <!-- Fin de l'élément de l'accordéon -->
-      <div class="accordion-item">
+        <!-- Deuxième période : Années de gloire -->
+        <div class="accordion-item">
           <h2>Les années de gloire (1963 – 1990) : L’âge d’or des géants</h2>
           La CAN devient un événement majeur, avec des équipes comme le Ghana, le Nigeria et l’Algérie qui se distinguent.
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button class="accordion-button collapsed" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseTwo" 
+                    aria-expanded="false" 
+                    aria-controls="collapseTwo">
               Voir plus sur les années de gloire
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionCAN">
+          <div id="collapseTwo" class="accordion-collapse collapse" 
+               aria-labelledby="headingTwo" 
+               data-bs-parent="#accordionCAN">
             <div class="accordion-body">
-              La CAN devient un événement majeur, avec des équipes comme le Ghana, le Nigeria et l’Algérie qui se distinguent.
+              <!-- Détails sur les équipes dominantes de l’époque -->
               <ul>
                 <li>Le Ghana brille avec ses "Black Stars".</li>
                 <li>Le Nigeria émerge comme une puissance du football africain.</li>
@@ -119,59 +138,65 @@
           </div>
         </div>
 
+        <!-- Troisième période : Modernisation -->
         <div class="accordion-item">
-        <h2>La modernisation (1996 – 2017) : L’âge d’or populaire</h2>
-        La CAN est modernisée, avec l’introduction de la télévision et des joueurs africains brillants en Europe.
-        <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Voir plus sur la modernisation
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionCAN">
-          <div class="accordion-body">
-            L’Afrique du Sud accueille le tournoi pour la première fois après la fin de l’apartheid, et le remporte.
-            <ul>
-              <li>L’Afrique du Sud accueille le tournoi pour la première fois après la fin de l’apartheid, et le remporte. </li>
-              <li>L’Égypte domine les années 2000 avec un triplé historique (2006, 2008, 2010).</li>
-              <li>Avec l’arrivée de la télévision et des joueurs africains qui brillaient en Europe, la CAN devint une fierté continentale.</li> 
-              <li>Des noms comme Drogba, Eto’o, Aboutrika ou Yaya Touré résonnaient dans tous les foyers. </li>
-              <li>L’Égypte, telle une légende ressuscitée, régna trois fois d’affilée. Chaque deux ans, le continent s’arrêtait pour vibrer au rythme du football.</li> 
-              <li>C’était l’âge d’or du peuple.</li>
-            </ul>
-          </div>
-        </div>
-      </div>  
-
-      <div class="accordion-item">
-        <h2>Nouvelle ère (depuis 2019) : La CAN moderne</h2>
-        La CAN est devenue un événement incontournable, attirant des millions de téléspectateurs à travers le monde. 
-        Les stades sont remplis de passionnés, et les joueurs africains brillent dans les plus grands clubs européens.
-        <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-            Voir plus sur la CAN moderne
-          </button>
-        </h2>
-        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionCAN">
-          <div class="accordion-body">
-            Nouvelles ères de la compétition.
-            Aujourd’hui, la CAN est plus grande, plus professionnelle. 
-            Elle se joue désormais à 24 nations, en été, et elle attire le regard du monde entier. 
-            L’Algérie triompha en 2019, le Sénégal, longtemps malchanceux, enfin couronné en 2022. 
-            Le Maroc flirta avec la gloire mondiale. La CAN n’est plus seulement africaine : elle est universelle, sans oublier ses racines.
-            <ul>
-              <li>En 2019, la CAN passe à 24 équipes.</li>
-              <li>Le tournoi est déplacé de janvier/février à juin/juillet (mais revient parfois en hiver à cause du climat).</li>
-              <li>Les dernières éditions :</li>
+          <h2>La modernisation (1996 – 2017) : L’âge d’or populaire</h2>
+          La CAN est modernisée, notamment grâce à la télévision.
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseThree" 
+                    aria-expanded="false" 
+                    aria-controls="collapseThree">
+              Voir plus sur la modernisation
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" 
+               aria-labelledby="headingThree" 
+               data-bs-parent="#accordionCAN">
+            <div class="accordion-body">
+              <!-- Faits marquants des éditions récentes -->
               <ul>
-                <li>2019 : l’Algérie triomphe.</li>
-                <li>2021 (jouée en 2022) : le Sénégal remporte sa première CAN.</li>
-                <li>2023 (jouée en 2024) : la Côte d’Ivoire est sacrée à domicile.</li>
+                <li>L’Afrique du Sud accueille le tournoi pour la première fois après la fin de l’apartheid, et le remporte. </li>
+                <li>L’Égypte domine les années 2000 avec un triplé historique (2006, 2008, 2010).</li>
+                <li>Avec l’arrivée de la télévision et des joueurs africains qui brillaient en Europe, la CAN devint une fierté continentale.</li> 
+                <li>Des noms comme Drogba, Eto’o, Aboutrika ou Yaya Touré résonnaient dans tous les foyers. </li>
+                <li>L’Égypte, telle une légende ressuscitée, régna trois fois d’affilée. Chaque deux ans, le continent s’arrêtait pour vibrer au rythme du football.</li> 
+                <li>C’était l’âge d’or du peuple.</li>
               </ul>
-            </ul>
+            </div>
           </div>
         </div>
-      </div>
+
+        <!-- Quatrième période : Ère moderne -->
+        <div class="accordion-item">
+          <h2>Nouvelle ère (depuis 2019) : La CAN moderne</h2>
+          La CAN attire maintenant un public mondial.
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#collapseFour" 
+                    aria-expanded="false" 
+                    aria-controls="collapseFour">
+              Voir plus sur la CAN moderne
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" 
+               aria-labelledby="headingFour" 
+               data-bs-parent="#accordionCAN">
+            <div class="accordion-body">
+              <!-- Faits récents de la CAN -->
+              <ul>
+                <li>24 équipes depuis 2019.</li>
+                <li>Période déplacée en été.</li>
+                <li>Dernières éditions : Algérie 2019, Sénégal 2021, Côte d’Ivoire 2023.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
     </div> 
+
+    <!-- Style CSS interne pour personnaliser l’accordéon -->
     <style>
       .accordion,
       .accordion-item,
@@ -179,17 +204,17 @@
       .accordion-button,
       .accordion-body {
         background-color: transparent !important;
-        box-shadow: none !important; /* Optionnel : retire l'ombre */
-        border: none !important; /* Optionnel : retire la bordure */
+        box-shadow: none !important;
+        border: none !important;
       }
 
-      .accordion-button{
-        color: #1a237e ;
+      .accordion-button {
+        color: #1a237e; /* Couleur personnalisée des boutons */
       }
     </style>
   </main>
   
-  <!-- Footer avec sponsors -->
+  <!-- Pied de page avec mentions et sponsors -->
   <footer class="bg-dark text-white mt-5 p-3">
     <div class="container d-flex justify-content-between">
       <div>
@@ -201,9 +226,10 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS via CDN -->
+  <!-- Intégration des scripts JS de Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Fichier JS personnalisé -->
+
+  <!-- Script JavaScript personnalisé -->
   <script src="js/script.js"></script>
 
 </body>

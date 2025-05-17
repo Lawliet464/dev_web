@@ -1,39 +1,42 @@
 .custom-cards-scroll {
-  display: flex;
-  overflow-x: auto;
-  gap: 1rem;
-  padding: 1rem 0;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  animation:  fadeInContainer 05s ease-out /*,  slideInMatch 05s ease-out; */
+  display: flex; /* Affiche les cartes en ligne */
+  overflow-x: auto; /* Active le scroll horizontal */
+  gap: 1rem; /* Espace entre les cartes */
+  padding: 1rem 0; /* Padding haut et bas */
+  scroll-behavior: smooth; /* Défilement fluide */
+  scroll-snap-type: x mandatory; /* Snap horizontal obligatoire */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Ombre légère */
+  animation: fadeInContainer 0.5s ease-out; /* Animation d'apparition */
 }
 
 /* Définition des animations */
 @keyframes fadeInContainer {
-    from { opacity: 0; transform: scale(0.5); }
-    to { opacity: 1; transform: scale(1); }
+    from { opacity: 0; transform: scale(0.5); } /* Départ invisible et petit */
+    to { opacity: 1; transform: scale(1); }     /* Arrivée visible et taille normale */
+
 }
 
 
 .custom-card {
-  /*flex: 0 0 auto;*/
-  min-width: 320px;
-  max-width: 350px;
-  scroll-snap-align: start;
-  flex: 1 1 300px; /* min 300px, prend plus si dispo */
+  min-width: 320px; /* Largeur minimale de la carte */
+  max-width: 350px; /* Largeur maximale de la carte */
+  scroll-snap-align: start; /* Aligne la carte au début lors du snap */
+  flex: 1 1 300px; /* Prend au moins 300px, peut grandir si espace dispo */
 }
 
 .scroll-btn {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  height: fit-content;
-  margin: 0 0.5rem;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond noir semi-transparent */
+  color: white; /* Texte blanc */
+  border: none; /* Pas de bordure */
+  font-size: 1rem; /* Taille du texte */
+  padding: 0.5rem 1rem; /* Padding interne */
+  cursor: pointer; /* Curseur pointeur */
+  height: fit-content; /* Hauteur adaptée au contenu */
+  margin: 0 0.5rem; /* Marge horizontale */
 }
+.scroll-btn {
+  border: 2px solid blue; /* Bordure bleue pour debug */
+} 
 
 
 

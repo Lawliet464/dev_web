@@ -188,45 +188,56 @@ console.log("Bienvenue sur le site de la CAN 2025 !");
 // Définir la date cible (ex : 21 decembre 2025 à 12h00)
 const targetDate = new Date("Dec 21, 2025 12:00:00").getTime();
 
+// Élément HTML où s'affiche le compte à rebours
 const countdownElement = document.getElementById("timer");
 
+// Exécution de la fonction toutes les secondes
 const interval = setInterval(() => {
     const now = new Date().getTime();   //recupere la date actuelle
-    const diff = targetDate - now;
+    
+    // Calcule la différence entre la date cible et la date actuelle
+   const diff = targetDate - now;
 
+   // Si la date cible est atteinte ou dépassée
     if (diff <= 0) {
-    clearInterval(interval);
-    countdownElement.innerHTML = "Le temps est écoulé !";
+    clearInterval(interval);// Stoppe le compte à rebours
+    countdownElement.innerHTML = "Bienvenue à la CAN édition 2025 au Maroc !";
     return;
     }
 
-    // Calcul des jours, heures, minutes, secondes
+    // Conversion de la différence en jours, heures, minutes, secondes
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
+     // Affiche le résultat dans l'élément HTML
+     const pad = (n) => (n < 10 ? "0" + n : n);
     countdownElement.innerHTML =
-    `${days}j ${hours}h ${minutes}m ${seconds}s`;
-}, 1000);
+    `${pad(days)}j ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
+}, 1000);  // Répète toutes les 1000 ms (1 seconde)
 
-//permettre le clignotement du temps restant sur mla page d'accueil
+//permettre le clignotement du temps restant sur la page d'accueil
+// Récupère l’élément HTML avec l’ID 'timer'
 const element = document.getElementById('timer');
-        let visible = true;
+let visible = true; // Variable d’état : indique si l’élément est actuellement visible
 
-        function toggleVisibility() {
-            visible = !visible;
-            element.style.opacity = visible ? '1' : '0';
-            
-            // Optionnel: changer d'autres propriétés
-            if (visible) {
-                //element.textContent = "Me revoilà !";
-                element.style.backgroundColor = "#4CAF50";
-            } else {
-                //element.textContent = "Je disparais...";
-                //element.style.backgroundColor = "#f44336";
-            }
-        }
+// Fonction pour alterner la visibilité de l’élément
+function toggleVisibility() {
+  // Bascule la valeur de 'visible' (true <-> false)
+    visible = !visible;
+    // Applique l’opacité : 1 (visible) ou 0 (invisible)
+    element.style.opacity = visible ? '1' : '0';
+    
+    //  changer de couleur de fond
+    if (visible) {
+        //element.textContent = "Me revoilà !";
+        element.style.backgroundColor = "#4CAF50";
+    } else {
+        //element.textContent = "Je disparais...";
+        //element.style.backgroundColor = "#f44336";
+    }
+}
 
-        // Démarrer l'animation
-        setInterval(toggleVisibility, 1000); // 1000 ms = 1 seconde
+// Démarrer l'animation toutes les 1 seconde
+setInterval(toggleVisibility, 1000); // 1000 ms = 1 seconde

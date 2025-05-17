@@ -18,8 +18,10 @@
   <!-- Header avec logo et menu de navigation -->
   <header class="bg-dark text-white p-3">
     <div class="container d-flex justify-content-between align-items-center">
-      <!-- Logo avec classe personnalisée -->
+        <!-- Logo avec classe personnalisée -->
+        <!-- Logo de la CAN -->
       <img src="images/logo.png" alt="Logo CAN" class="logo-can">
+      <!-- Menu de navigation -->
       <nav>
         <a href="index.html" class="text-white mx-2">Accueil</a>
         <a href="actualites.html" class="text-white mx-2">Actualités</a>
@@ -32,14 +34,18 @@
     </div>
   </header>
 
+    <!-- ====== FORMULAIRE DE COMMENTAIRE ====== -->
+    <!-- Permet aux visiteurs de laisser un avis sur la CAN 2025 -->
     <h2 style="color: bisque; text-align: center;">Laissez-nous un commentaire</h2>
-
+    <!-- Formulaire d'envoi de commentaire -->
     <form action="" id="comm-form" >
       <div style="background-color: transparent"><!-- rgb(0 255 0 / 54%) */-->
         <h2 style="text-align: center; color: bisque;">Que pensez-vous de la can 2025 au Maroc ...</h2>
+        <!-- Champ Nom -->
         <label for="name">Name : </label>
         <input type="text" name="name" id="name" placeholder="Name" required>
         <br>
+        <!-- Champ Continent -->
         <label for="continent">Continent : </label>
         <select name="continent" id="continent" required>
             <option value="">Sélectionnez un continent</option>
@@ -52,11 +58,13 @@
             <option value="Antarctique">Antarctique</option>
         </select>
         <br>
+        <!-- Champ Commentaire -->
         <label for="commentaires">Commentaires : </label>
         <textarea name="commentaires" id="new_commentaire" placeholder="Votre message"
           rows="2" cols="22" required="required"></textarea>
        <!--  <textarea id="new_commentaire" cols="500" rows="10" placeholder="Message"></textarea>
         --> <br><br>
+        <!-- Bouton d'envoi -->
         <button type="button" onclick="addCommentaire()">envoyez</button>
       </div>
       
@@ -64,12 +72,15 @@
 
 
 
-    <!-- commentaires -->
+    <!-- ====== SECTION COMMENTAIRES ====== -->
+    <!-- Affiche les commentaires existants -->
     <section id="commentaires">
         <br>
         <h2 style="text-align: center; color: wheat;">Commentaires</h2>
         <div style="clear:both;"></div>
+        <!-- Zone de tous les commentaires -->
         <div class="all_commentaires" id="all_commentaires">
+            <!-- Chaque bloc ci-dessous représente un commentaire affiché -->
             <div class="commentaire">
                 <span>&#8220;</span>
                 Je suis ravi que la CAN 2025 se déroule au Maroc. L’Afrique a tant à offrir en matière de football et je suis sûr que ce sera un événement inoubliable pour tout le continent. <br><b>- Amadou (Afrique)</b>
@@ -98,6 +109,9 @@
         </div>
     </section>
 
+    <!-- ====== POPUP DE CONFIRMATION ====== -->
+    <!-- S'affiche après l'envoi réussi du commentaire -->
+  
     <div class="popup" id="popup" class="flex_center">
 			<img src="images/valider.png" width="80px"/>
 			<h3> Merci pour votre commentaire !</h3>
@@ -106,7 +120,8 @@
 </body>
 
 
-<!-- Footer avec sponsors -->
+    <!-- ====== PIED DE PAGE (FOOTER) ====== -->
+    <!-- Informations de copyright et sponsors -->
   <footer class="bg-dark text-white mt-5 p-3">
     <div class="container d-flex justify-content-between">
       <div>

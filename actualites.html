@@ -7,6 +7,7 @@
   <title>Actualites - CAN 2025</title>
 
   <!-- Bootstrap CSS via CDN -->
+   <!-- Intégration de Bootstrap pour la mise en page responsive -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Feuille de style personnalisée -->
@@ -17,11 +18,12 @@
 
 <body>
   <!-- Header avec logo et menu de navigation -->
-  <!-- Header avec logo et menu de navigation -->
   <header class="bg-dark text-white p-3">
     <div class="container d-flex justify-content-between align-items-center">
       <!-- Logo avec classe personnalisée -->
+       <!-- Logo de la CAN -->
       <img src="images/logo.png" alt="Logo CAN" class="logo-can">
+      <!-- Menu de navigation -->
       <nav>
         <a href="index.html" class="text-white mx-2" id="index">Accueil</a>
         <a href="actualites.html" class="text-white mx-2" id="actualites">Actualités</a>
@@ -33,23 +35,28 @@
       </nav>
     </div>
   </header>
+  <!-- ====== CONTENU PRINCIPAL ====== -->
   <div class="container">
     <br>
     <div class="container mt-4">
-
+      <!-- Paragraphe introductif -->
       <p>
         La Coupe d’Afrique des nations 2025, qui se tiendra au Maroc, promet une édition palpitante avec des confrontations attendues entre les grandes nations du football africain. 
         Le pays hôte s’apprête à accueillir, du 21 décembre 2025 au 18 janvier 2026, un tournoi chargé d’enjeux sportifs et diplomatiques.
       </p>
+      <!-- Titre principal -->
       <h2 style="text-align: center;">Bienvenue sur la page des actualites de la CAN !</h2>
-
+      <!-- ====== SECTION DES CARTES D'ACTUALITÉS ====== -->
+      
       <div class="d-flex align-items-center">
         <!-- Flèche gauche -->
         <!-- //todo: faire le fleche click gauche -->
         <!-- <button class="scroll-btn left-btn" onclick="scrollCards(-1)">&#8592;</button> -->
 
-        <!-- Conteneur scrollable -->
+        
+         <!-- Conteneur horizontal de cartes (scrollable) -->
         <div class="custom-cards-scroll" id="scrollContainer">
+          <!-- Carte 1 : Maroc -->
           <div class="card custom-card" style="background-color: beige;">
             <a href="https://www.radiofrance.fr/mouv/maroc-la-can-2025-entre-t-elle-dans-une-nouvelle-dimension-4503523" 
               style="text-decoration: none; color: black;">
@@ -60,6 +67,7 @@
               </div>
             </a>
           </div>
+          <!-- Carte 2 : Cameroun -->
           <div class="card custom-card" style="background-color: beige;">
             <a href="https://www.leparisien.fr/sports/football/cameroun/" style="text-decoration: none; color: black;">
               <div class="card-header">Actualités sur le Cameroun</div>
@@ -71,7 +79,7 @@
               </div>
             </a>
           </div>
-
+          <!-- Carte 3 : Burkina-Faso -->
           <div class="card w-25 custom-card col-sm-12 col-md-4" style="background-color: beige;">
             <a href="https://www.lequipe.fr/Football/Actualites/Le-burkina-faso-premier-qualifie-pour-la-can-2025-au-maroc-apres-son-succes-au-burundi/1513670"
               style="text-decoration: none; color: black;">
@@ -88,7 +96,7 @@
               </div>
             </a>
           </div>
-
+          <!-- Carte 4 : Tirage au sort -->
           <div class="card w-25 custom-card col-sm-12 col-md-4" style="background-color: beige;">
             <a href="https://www.ouest-france.fr/sport/football/coupe-d-afrique-des-nations/can-2025-heure-chaine-chapeaux-tout-savoir-sur-le-tirage-au-sort-de-la-phase-de-groupes-701a80d4-dc7f-11ef-8f83-1be9a95f1bed"
               style="text-decoration: none; color: black;">
@@ -115,23 +123,18 @@
   <script>
     function scrollCards(direction) {
       console.log("Défilement dans la direction :", direction);
-      const container = document.getElementById("scrollContainer");
+      const container = document.getElementById("scrollContainer");// Sélectionne l'élément avec l'ID "scrollContainer" (le conteneur à faire défiler)
+
+
       const scrollAmount = 300;
       container.scrollBy({
-        left: direction * scrollAmount,
-        behavior: 'smooth'
+        left: direction * scrollAmount, // Déplace l'élément vers la gauche ou la droite selon la valeur de direction (-1 = gauche, 1 = droite)
+        behavior: 'smooth' // Applique un effet de défilement fluide
       });
     }
   </script>
-  </div>
 
-  </div>
-  </div>
-
-
-  </div>
-  </div>
-  <br>
+  
 </body>
 <!-- Footer avec sponsors -->
 <footer class="bg-dark text-white mt-5 p-3">
@@ -144,16 +147,6 @@
     </div>
   </div>
 </footer>
-<script>
-  function scrollCards(direction) {
-    const container = document.getElementById("scrollContainer");
-    const scrollAmount = 300; // Ajuste selon la taille des cartes
-    container.scrollBy({
-      left: direction * scrollAmount,
-      behavior: 'smooth'
-    });
-  }
-</script>
 <!-- Bootstrap JS via CDN -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Fichier JS personnalisé -->
