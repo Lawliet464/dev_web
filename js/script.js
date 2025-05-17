@@ -1,41 +1,156 @@
+/* --- CAN 2025 : données officielles au 17 mai 2025 --- */
 const paysParticipants = {
-    "sénégal": {
-      image: "images/drapeaux/senegal.png",
-      groupe: "A",
-      entraineur: "Aliou Cissé",
-      capitaine: "Kalidou Koulibaly"
-    },
-    "cameroun": {
-      image: "images/drapeaux/cameroon.png",
-      groupe: "B",
-      entraineur: "Rigobert Song",
-      capitaine: "Vincent Aboubakar"
-    },
-    "algérie": {
-      image: "images/drapeaux/algeria.png",
-      groupe: "C",
-      entraineur: "Djamel Belmadi",
-      capitaine: "Riyad Mahrez"
-    },
-    "burkina": {
-      image: "images/drapeaux/burkina-faso.png",
-      groupe: "D",
-      entraineur: "Brama Traoré",
-      capitaine: "Bertrand Traoré"
-    },
-    "égypte": {
-      image: "images/drapeaux/egypt.png",
-      groupe: "E",
-      entraineur: "Carlos Queiroz",
-      capitaine: "Mohamed Salah"
-    },
-    "maroc": {
-      image: "images/drapeaux/maroc.png",
-      groupe: "F",
-      entraineur: "Vahid Halilhodžić",
-      capitaine: "Romain Saïss"
-    }
-  };
+  "maroc": {
+    image: "images/can-2025-drapeaux/ma.png",
+    groupe: "1",
+    entraineur: "Walid Regragui",
+    capitaine: "Achraf Hakimi"
+  },
+  "mali": {
+    image: "images/can-2025-drapeaux/ml.png",
+    groupe: "1",
+    entraineur: "Éric Chelle",
+    capitaine: "Hamari Traoré"
+  },
+  "zambie": {
+    image: "images/can-2025-drapeaux/zm.png",
+    groupe: "1",
+    entraineur: "Avram Grant",
+    capitaine: "Patson Daka"
+  },
+  "comores": {
+    image: "images/can-2025-drapeaux/km.png",
+    groupe: "1",
+    entraineur: "Stefano Cusin",
+    capitaine: "El Fardou Ben"
+  },
+
+  "egypte": {
+    image: "images/can-2025-drapeaux/eg.png",
+    groupe: "2",
+    entraineur: "Rui Vitória",
+    capitaine: "Mohamed Salah"
+  },
+  "angola": {
+    image: "images/can-2025-drapeaux/ao.png",
+    groupe: "2",
+    entraineur: "Pedro Gonçalves",
+    capitaine: "Gelson Dala"
+  },
+  "afrique du sud": {
+    image: "images/can-2025-drapeaux/za.png",
+    groupe: "2",
+    entraineur: "Hugo Broos",
+    capitaine: "Ronwen Williams"
+  },
+  "zimbabwe": {
+    image: "images/can-2025-drapeaux/zw.png",
+    groupe: "2",
+    entraineur: "Sunday Chidzambwa",
+    capitaine: "Marshall Munetsi"
+  },
+
+  "nigeria": {
+    image: "images/can-2025-drapeaux/ng.png",
+    groupe: "3",
+    entraineur: "Finidi George",
+    capitaine: "William Troost-Ekong"
+  },
+  "tunisie": {
+    image: "images/can-2025-drapeaux/tn.png",
+    groupe: "3",
+    entraineur: "Montasser Louhichi",
+    capitaine: "Yassine Meriah"
+  },
+  "ouganda": {
+    image: "images/can-2025-drapeaux/ug.png",
+    groupe: "3",
+    entraineur: "Micho Sredojević",
+    capitaine: "Khalid Aucho"
+  },
+  "tanzanie": {
+    image: "images/can-2025-drapeaux/tz.png",
+    groupe: "3",
+    entraineur: "Adel Amrouche",
+    capitaine: "Mbwana Samatta"
+  },
+
+  "sénégal": {
+    image: "images/can-2025-drapeaux/sn.png",
+    groupe: "4",
+    entraineur: "Aliou Cissé",
+    capitaine: "Sadio Mané"
+  },
+  "rd congo": {
+    image: "images/can-2025-drapeaux/cd.png",
+    groupe: "4",
+    entraineur: "Sébastien Desabre",
+    capitaine: "Chancel Mbemba"
+  },
+  "bénin": {
+    image: "images/can-2025-drapeaux/bj.png",
+    groupe: "4",
+    entraineur: "Gernot Rohr",
+    capitaine: "Cédric Hountondji"
+  },
+  "botswana": {
+    image: "images/can-2025-drapeaux/bw.png",
+    groupe: "4",
+    entraineur: "Didier Gomes da Rosa",
+    capitaine: "Thatayaone Ditlhokwe"
+  },
+
+  "algérie": {
+    image: "images/can-2025-drapeaux/dz.png",
+    groupe: "5",
+    entraineur: "Vladimir Petković",
+    capitaine: "Ismaël Bennacer"
+  },
+  "guinée équatoriale": {
+    image: "images/can-2025-drapeaux/gq.png",
+    groupe: "5",
+    entraineur: "Juan Micha",
+    capitaine: "Emilio Nsue"
+  },
+  "burkina faso": {
+    image: "images/can-2025-drapeaux/bf.png",
+    groupe: "5",
+    entraineur: "Bruno Metsu Jr (intérim)",
+    capitaine: "Edmond Tapsoba"
+  },
+  "soudan": {
+    image: "images/can-2025-drapeaux/sd.png",
+    groupe: "5",
+    entraineur: "James Kwesi Appiah",
+    capitaine: "Salaheldin Bakhit"
+  },
+
+  "côte d’ivoire": {
+    image: "images/can-2025-drapeaux/ci.png",
+    groupe: "6",
+    entraineur: "Emerse Faé",
+    capitaine: "Franck Kessié"
+  },
+  "cameroun": {
+    image: "images/can-2025-drapeaux/cm.png",
+    groupe: "6",
+    entraineur: "Marc Bryce",
+    capitaine: "Vincent Aboubakar"
+  },
+  "gabon": {
+    image: "images/can-2025-drapeaux/ga.png",
+    groupe: "6",
+    entraineur: "Thierry Boukambou",
+    capitaine: "Denis Bouanga"
+  },
+  "mozambique": {
+    image: "images/can-2025-drapeaux/mz.png",
+    groupe: "6",
+    entraineur: "Chiquinho Conde",
+    capitaine: "Reinildo Mandava"
+  }
+};
+
   
   function rechercherPays() {
     const saisie = document.getElementById("champPays").value.toLowerCase().trim();
