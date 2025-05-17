@@ -109,3 +109,22 @@ form div{
   transform: translate(-50%, -50%);
 
 } */
+
+/*empeche que il y'a le scrolling sur le iframe du header*/
+#header {
+  width: 100%;
+  height: 102px; /* Hauteur fixe */
+  border: none; /* Supprime la bordure */
+  overflow: hidden; /* Empêche le défilement interne */
+  scrolling: no; /* Désactive le scroll (non pris en charge par certains navigateurs) */
+}
+
+/*empeche que il y'a le scrolling sur le iframe du footer*/
+#footer{
+  width: 100%;
+  height: 107vh; /* Hauteur fixe */
+  border: none; /* Supprime la bordure */
+  overflow: hidden; /* Empêche le défilement interne */
+  scrolling: no; /* Désactive le scroll (non pris en charge par certains navigateurs) */
+  background-color: transparent;
+}
