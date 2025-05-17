@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accueil - CAN 2025</title>
+
+    <!-- Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Feuille de style personnalisée -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/commentaire.css">
+</head>
+
+<body>
+
+  <!-- Header avec logo et menu de navigation -->
+  <header class="bg-dark text-white p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <!-- Logo avec classe personnalisée -->
+      <img src="images/logo.png" alt="Logo CAN" class="logo-can">
+      <nav>
+        <a href="index.html" class="text-white mx-2">Accueil</a>
+        <a href="actualites.html" class="text-white mx-2">Actualités</a>
+        <a href="histoire.html" class="text-white mx-2">Histoire</a>
+        <a href="calendrier.html" class="text-white mx-2">Calendrier</a>
+        <a href="pays.html" class="text-white mx-2">Pays</a>
+        <a href="classement.html" class="text-white mx-2">Classement</a>
+        <a href="commentaire.html" class="text-white mx-2">Commentaire</a>
+      </nav>
+    </div>
+  </header>
+
+    <h2 style="color: bisque; text-align: center;">Laissez-nous un commentaire</h2>
+
+    <form action="" id="comm-form" >
+      <div style="background-color: transparent"><!-- rgb(0 255 0 / 54%) */-->
+        <h2 style="text-align: center; color: bisque;">Que pensez-vous de la can 2025 au Maroc ...</h2>
+        <label for="name">Name : </label>
+        <input type="text" name="name" id="name" placeholder="Name" required>
+        <br>
+        <label for="continent">Continent : </label>
+        <select name="continent" id="continent" required>
+            <option value="">Sélectionnez un continent</option>
+            <option value="Afrique">Afrique</option>
+            <option value="Europe">Europe</option>
+            <option value="Asie">Asie</option>
+            <option value="Amérique du Nord">Amérique du Nord</option>
+            <option value="Amérique du Sud">Amérique du Sud</option>
+            <option value="Océanie">Océanie</option>
+            <option value="Antarctique">Antarctique</option>
+        </select>
+        <br>
+        <label for="commentaires">Commentaires : </label>
+        <textarea name="commentaires" id="new_commentaire" placeholder="Votre message"
+          rows="2" cols="22" required="required"></textarea>
+       <!--  <textarea id="new_commentaire" cols="500" rows="10" placeholder="Message"></textarea>
+        --> <br><br>
+        <button type="button" onclick="addCommentaire()">envoyez</button>
+      </div>
+      
+    </form>
+
+
+
+    <!-- commentaires -->
+    <section id="commentaires">
+        <br>
+        <h2 style="text-align: center; color: wheat;">Commentaires</h2>
+        <div style="clear:both;"></div>
+        <div class="all_commentaires" id="all_commentaires">
+            <div class="commentaire">
+                <span>&#8220;</span>
+                Je suis ravi que la CAN 2025 se déroule au Maroc. L’Afrique a tant à offrir en matière de football et je suis sûr que ce sera un événement inoubliable pour tout le continent. <br><b>- Amadou (Afrique)</b>
+                <span>&#8221;</span>
+            </div>
+            <div class="commentaire">
+                <span>&#8220;</span>
+                J’adore suivre la CAN depuis l’Europe. C’est toujours un plaisir de voir la passion et le talent des équipes africaines. Bonne chance à tous ! <br><b>- Sofia (Europe)</b>
+                <span>&#8221;</span>
+            </div>
+            <div class="commentaire">
+                <span>&#8220;</span>
+                En Asie, nous sommes de plus en plus nombreux à nous intéresser au football africain. J’espère que la CAN 2025 sera diffusée ici pour que nous puissions en profiter aussi. <br><b>- Kenji (Asie)</b>
+                <span>&#8221;</span>
+            </div>
+            <div class="commentaire">
+                <span>&#8220;</span>
+                Je suis impressionné par l’organisation de la CAN 2025. Le Maroc va sûrement offrir un spectacle incroyable pour tous les fans de football, même ici en Amérique du Sud. <br><b>- Camila (Amérique du Sud)</b>
+                <span>&#8221;</span>
+            </div>
+            <div class="commentaire">
+                <span>&#8220;</span>
+                Même en Océanie, nous suivons la CAN avec enthousiasme. C’est formidable de voir autant de diversité et de talent sur le terrain. <br><b>- Liam (Océanie)</b>
+                <span>&#8221;</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="popup" id="popup" class="flex_center">
+			<img src="images/valider.png" width="80px"/>
+			<h3> Merci pour votre commentaire !</h3>
+			<button onclick="showPopup(false)">Ok</button>
+	</div>
+</body>
+
+
+<!-- Footer avec sponsors -->
+  <footer class="bg-dark text-white mt-5 p-3">
+    <div class="container d-flex justify-content-between">
+      <div>
+        <p>© 2025 CAN | Tous droits réservés</p>
+      </div>
+      <div>
+        <p>Sponsors : Puma, Orange, TotalEnergies</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Fichier JS personnalisé -->
+  <script src="js/script.js"></script>
+  <!--Pour ajouter un commentaire-->
+    <script src="js/commentaire.js"></script>
+
+</body>
+</html>
