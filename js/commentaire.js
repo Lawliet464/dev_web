@@ -11,8 +11,8 @@ function addCommentaire() {
         element.setAttribute("class","commentaire");
         var name = document.getElementById("name").value;
         var continent = document.getElementById("continent").value;
-        element.innerHTML = "\<span\>&#8220;\</span\>" + commentaire.value + "\<span\>&#8221;\</span\>";
-        element.innerHTML += "<br><b>- " + name + " (" + continent + ")</b>"
+        element.innerHTML = "\<span\>&#8220;\</span\>" + commentaire.value;
+        element.innerHTML += "<br><b>- " + name + " (" + continent + ")</b>"  + "\<span\>&#8221;\</span\>";
         /* element.innerHTML += "<br><span class='name'>"+ name + "</span>";
         element.innerHTML += "<span class='continent'>"+ continent + "</span>";
          */// Add this element to the end of the list of commentaires
