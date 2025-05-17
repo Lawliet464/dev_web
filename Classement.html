@@ -1,244 +1,165 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Classement CAN 2025</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Classement – CAN 2025</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <style>
-    /* Arrière-plan général */
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #1a1a2e;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    /* Menu en haut à droite */
-    header {
-      display: flex;
-      justify-content: flex-end;
-      padding: 20px;
-      background-color: #0f3460;
-    }
-
-    nav a {
-      color: #ffb900;
-      text-decoration: none;
-      margin-left: 20px;
-      font-weight: bold;
-      font-size: 18px;
-    }
-
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    /* Conteneur principal */
-    .container {
-      width: 80%;
-      max-width: 1000px;
-      margin: auto;
-      background-color: rgba(0, 0, 0, 0.7);
-      border-radius: 10px;
-      padding: 30px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      animation: fadeInContainer 1s ease-in-out;
-      flex: 1;
-    }
-
-    h1 {
-      text-align: center;
-      color: #ffb900;
-      font-size: 36px;
-      margin-bottom: 20px;
-      opacity: 0;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      border-radius: 8px;
-      overflow: hidden;
-      opacity: 0;
-    }
-
-    th, td {
-      padding: 15px;
-      text-align: center;
-      font-size: 18px;
-      border-bottom: 2px solid #444;
-    }
-
-    th {
-      background-color: #ffb900;
-      color: #333;
-    }
-
-    tr:nth-child(even) {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    tr:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      transition: background-color 0.3s ease;
-    }
-
-    .team-img {
-      width: 30px;
-      height: 20px;
-      object-fit: cover;
-      border-radius: 5px;
-      vertical-align: middle;
-    }
-
-    .button {
-      background-color: #ffb900;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      font-size: 18px;
-      color: #333;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: transform 0.3s;
-    }
-
-    .button:hover {
-      transform: scale(1.1);
-    }
-
-    /* Footer */
-    footer {
-      background-color: #0f3460;
-      color: #ccc;
-      text-align: center;
-      padding: 15px;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-30px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideIn {
-      from { opacity: 0; transform: translateX(-50px); }
-      to   { opacity: 1; transform: translateX(0); }
-    }
-
-    @keyframes fadeInContainer {
-      from { opacity: 0; transform: scale(0.95); }
-      to   { opacity: 1; transform: scale(1); }
-    }
+    body            {background:#1a1a2e;color:#fff;min-height:100vh;display:flex;flex-direction:column;}
+    header,footer   {background:#0f3460;}
+    nav a           {color:#ffb900!important;font-weight:bold;}
+    h1,h2           {color:#ffb900;}
+    .table-dark tbody tr:nth-of-type(even){background-color:#242447;}
+    .fade-up        {opacity:0;transform:translateY(25px);transition:.7s;}
+    .fade-up.show   {opacity:1;transform:none;}
   </style>
 </head>
 <body>
 
-  <header>
+<header class="py-3">
+  <div class="container d-flex justify-content-end">
     <nav>
-      <a href="index.html">🏠 Accueil</a>
+      <a href="index.html" class="me-3">🏠 Accueil</a>
+      <a href="calendrier.html">📅 Calendrier</a>
     </nav>
-  </header>
-
-  <div class="container">
-    <h1>Classement CAN 2025</h1>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Position</th>
-          <th>Pays</th>
-          <th>Points</th>
-          <th>Victoires</th>
-          <th>Matchs Nuls</th>
-          <th>Défaites</th>
-          <th>Diff. de buts</th>
-          <th>Buts Marqués</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td><img src="images/drapeaux/senegal.png" class="team-img" alt="Sénégal"> Sénégal</td>
-          <td>9</td>
-          <td>3</td>
-          <td>0</td>
-          <td>0</td>
-          <td>+6</td>
-          <td>8</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td><img src="images/drapeaux/cameroon.png" class="team-img" alt="Cameroun"> Cameroun</td>
-          <td>7</td>
-          <td>2</td>
-          <td>1</td>
-          <td>0</td>
-          <td>+4</td>
-          <td>6</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td><img src="images/drapeaux/algeria.png" class="team-img" alt="Algérie"> Algérie</td>
-          <td>6</td>
-          <td>2</td>
-          <td>0</td>
-          <td>1</td>
-          <td>+3</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td><img src="images/drapeaux/egypt.png" class="team-img" alt="Égypte"> Égypte</td>
-          <td>6</td>
-          <td>2</td>
-          <td>0</td>
-          <td>1</td>
-          <td>+2</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td><img src="images/drapeaux/maroc.png" class="team-img" alt="Maroc"> Maroc</td>
-          <td>6</td>
-          <td>2</td>
-          <td>0</td>
-          <td>1</td>
-          <td>+1</td>
-          <td>4</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <button class="button" onclick="window.location.reload();">🔄 Rafraîchir le Classement</button>
   </div>
+</header>
 
-  <footer>
-    © 2025 Classement CAN. Tous droits réservés.
-  </footer>
+<main class="container my-4 flex-fill">
+  <h1 class="text-center mb-5 fade-up">Classements – Phase de Groupes</h1>
 
-  <!-- Animation JS -->
-  <script>
-    window.addEventListener("load", function () {
-      const h1 = document.querySelector('h1');
-      const table = document.querySelector('table');
+  <!-- ===== Fonction utilitaire pour un groupe ===== -->
+  <!-- Utilise un composant Bootstrap .table-dark -->
+  <!-- Copie-colle le bloc .groupe et change les équipes/chiffres -->
 
-      // Réinitialise les animations
-      h1.style.animation = 'none';
-      table.style.animation = 'none';
+  <!-- ===== Groupe A ===== -->
+  <section class="groupe mb-5 fade-up">
+    <h2>Groupe A</h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-bordered text-center align-middle mb-0">
+        <thead class="table-primary text-dark">
+          <tr><th>#</th><th>Équipe</th><th>MJ</th><th>G</th><th>N</th><th>P</th><th>BP</th><th>BC</th><th>Diff</th><th>Pts</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>🇲🇦 Maroc</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>2</td><td>🇲🇱 Mali</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>3</td><td>🇿🇲 Zambie</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>4</td><td>🇰🇲 Comores</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-      // Force le reflow pour permettre la relance
-      void h1.offsetWidth;
-      void table.offsetWidth;
+  <!-- ===== Groupe B ===== -->
+  <section class="groupe mb-5 fade-up">
+    <h2>Groupe B</h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-bordered text-center align-middle mb-0">
+        <thead class="table-primary text-dark">
+          <tr><th>#</th><th>Équipe</th><th>MJ</th><th>G</th><th>N</th><th>P</th><th>BP</th><th>BC</th><th>Diff</th><th>Pts</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>🇪🇬 Égypte</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>2</td><td>🇿🇦 Afrique du Sud</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>3</td><td>🇦🇴 Angola</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>4</td><td>🇿🇼 Zimbabwe</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-      // Relance les animations
-      h1.style.animation = "fadeIn 1s ease-in-out forwards";
-      table.style.animation = "slideIn 1s ease-out forwards";
+  <!-- ===== Répète la même structure pour groupes C, D, E, F ===== -->
+  <!-- === Groupe C === -->
+  <section class="groupe mb-5 fade-up">
+    <h2>Groupe C</h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-bordered text-center align-middle mb-0">
+        <thead class="table-primary text-dark">
+          <tr><th>#</th><th>Équipe</th><th>MJ</th><th>G</th><th>N</th><th>P</th><th>BP</th><th>BC</th><th>Diff</th><th>Pts</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>🇳🇬 Nigeria</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>2</td><td>🇹🇿 Tanzanie</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>3</td><td>🇹🇳 Tunisie</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>4</td><td>🇺🇬 Ouganda</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Groupe D === -->
+  <section class="groupe mb-5 fade-up">
+    <h2>Groupe D</h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-bordered text-center align-middle mb-0">
+        <thead class="table-primary text-dark">
+          <tr><th>#</th><th>Équipe</th><th>MJ</th><th>G</th><th>N</th><th>P</th><th>BP</th><th>BC</th><th>Diff</th><th>Pts</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>🇸🇳 Sénégal</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>2</td><td>🇧🇼 Botswana</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>3</td><td>🇨🇩 RD Congo</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>4</td><td>🇧🇯 Bénin</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Groupe E === -->
+  <section class="groupe mb-5 fade-up">
+    <h2>Groupe E</h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-bordered text-center align-middle mb-0">
+        <thead class="table-primary text-dark">
+          <tr><th>#</th><th>Équipe</th><th>MJ</th><th>G</th><th>N</th><th>P</th><th>BP</th><th>BC</th><th>Diff</th><th>Pts</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>🇩🇿 Algérie</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>2</td><td>🇧🇫 Burkina Faso</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>3</td><td>🇬🇶 Guinée Équatoriale</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>4</td><td>🇸🇩 Soudan</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- === Groupe F === -->
+  <section class="groupe mb-5 fade-up">
+    <h2>Groupe F</h2>
+    <div class="table-responsive">
+      <table class="table table-dark table-bordered text-center align-middle mb-0">
+        <thead class="table-primary text-dark">
+          <tr><th>#</th><th>Équipe</th><th>MJ</th><th>G</th><th>N</th><th>P</th><th>BP</th><th>BC</th><th>Diff</th><th>Pts</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>🇨🇲 Cameroun</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>2</td><td>🇨🇮 Côte d’Ivoire</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>3</td><td>🇬🇦 Gabon</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>4</td><td>🇲🇿 Mozambique</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer class="text-center py-3">© 2025 CAN – Tous droits réservés</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Ajoute la classe "show" pour déclencher l'opacité/transition
+  window.addEventListener('load',()=>{
+    document.querySelectorAll('.fade-up').forEach((el,i)=>{
+      setTimeout(()=>el.classList.add('show'),300+i*100);
     });
-  </script>
+  });
+</script>
+
 </body>
 </html>
